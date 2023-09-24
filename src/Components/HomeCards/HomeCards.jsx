@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const HomeCards = ({ card }) => {
-    const 
+    const navigate = useNavigate()
   const {
     card_bg_color,
     category,
@@ -7,6 +9,7 @@ const HomeCards = ({ card }) => {
     picture,
     text_color,
     title,
+    id
   } = card;
 
   const cardBgStyle = {
@@ -17,13 +20,16 @@ const HomeCards = ({ card }) => {
     backgroundColor:category_bg_color,
   }
 
+const handleNavigate = () =>{
+    navigate(`/details/${id}`)
+}
 
   
   return (
     <div>
       <div 
-      onClick={}
-       style={cardBgStyle}  className="relative flex h-72 flex-col rounded-xl bg-clip-border text-gray-700 shadow-md">
+      onClick={handleNavigate}
+       style={cardBgStyle}  className="relative flex h-72 flex-col rounded-xl bg-clip-border text-gray-700 shadow-md cursor-pointer">
         <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
           <img
             src={picture}
