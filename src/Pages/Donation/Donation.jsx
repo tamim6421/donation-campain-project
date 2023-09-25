@@ -4,6 +4,7 @@ import DonationCard from "./DonationCard";
 const Donation = () => {
 const [donate, setDonate] = useState([])
 const [empty, setEmpty] = useState('')
+const [dataLength, setDataLength] = useState(4)
 
 useEffect( ()=>{
 
@@ -16,7 +17,7 @@ useEffect( ()=>{
    
 } ,[])
 
-console.log(donate , empty)
+console.log(donate.length)
   return (
     <div>
       {
@@ -24,9 +25,21 @@ console.log(donate , empty)
         <div>
             <div className="grid gap-5 grid-cols-1 md:grid-cols-2 mt-4">
                 {
-                    donate.map(item => <DonationCard key={item.id} item={item}></DonationCard>)
+                   
+                  donate.slice(0, dataLength).map(item => <DonationCard key={item.id} item={item}></DonationCard>)
                 }
             </div>
+            <div className={dataLength === donate.length && 'hidden'}>
+            {
+                donate.length > 4 && <div>
+                <button 
+                onClick={()=>setDataLength(donate.length)}
+                className="bg-green-500 text-white px-5 py-1 rounded-md block mx-auto my-10">
+                See All</button>
+            </div>
+            }
+            </div>
+            
       </div>
       }
     </div>
