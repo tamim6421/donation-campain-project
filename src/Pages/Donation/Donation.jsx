@@ -1,23 +1,27 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import DonationCard from "./DonationCard";
-
+import Statistics from "../Statistics/Statistics";
+export const  DataContext = createContext()
 const Donation = () => {
 const [donate, setDonate] = useState([])
 const [empty, setEmpty] = useState('')
 const [dataLength, setDataLength] = useState(4)
+
 
 useEffect( ()=>{
 
     const getDonateItems = JSON.parse(localStorage.getItem('items'))
     if(getDonateItems){
         setDonate(getDonateItems)
+        
     }else{
         setEmpty('Empty')
     }
    
 } ,[])
 
-// console.log(donate.length)
+
+
   return (
     <div>
       {

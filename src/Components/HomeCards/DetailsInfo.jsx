@@ -6,7 +6,7 @@ const DetailsInfo = ({data}) => {
     // console.log(data)
 
 const handleDonation = () =>{
-    console.log('donation')
+    // console.log('donation')
     const donateItems = []
     const getDonateItems = JSON.parse(localStorage.getItem('items'))
     if(!getDonateItems){
