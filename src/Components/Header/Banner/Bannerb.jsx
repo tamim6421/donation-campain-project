@@ -15,9 +15,9 @@ const Banner = () => {
               I Grow By Helping People In Need
             </h1>
             <input
-              className="p-2 rounded-lg outline-none  md:py-2 px-10"
-              placeholder="Search here"
               type="text"
+              placeholder="Type here"
+              className="input input-bordered input-md w-full max-w-xs"
             />
             <button className="p-1 mt-3 md:p-2 rounded-lg bg-[#FF444A] text-white font-bold">
               Search
@@ -30,7 +30,5 @@ const Banner = () => {
 };
 
 export default Banner;
-
-
 
 // https://i.ibb.co/Z16pnRC/team.jpg

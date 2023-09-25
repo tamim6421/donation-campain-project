@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+
+import {  useNavigate } from 'react-router-dom';
 
 const DonationCard = ({item}) => {
     const navigate = useNavigate()
@@ -11,7 +12,7 @@ const DonationCard = ({item}) => {
         text_color,
         title,
         price,
-        id
+     
       } = item;
     
       const cardBgStyle = {
@@ -35,13 +36,15 @@ const DonationCard = ({item}) => {
     }
     return (
         <div>
-             <div className="card card-side bg-base-100 shadow-xl p-2">
-          <figure>
+             <div className=" flex flex-col md:flex-row card card-side bg-base-100 shadow-xl p-2">
+        <div>
+        <figure>
             <img
               src={picture}
               alt="Movie"
             />
           </figure>
+        </div>
           <div style={cardBgStyle} className="card-body p-2">
            <span style={cateBg} className='max-w-max px-4 py-2 font-bold rounded-sm '> {category} </span>
             <p className='text-xl font-semibold'>{title} </p>

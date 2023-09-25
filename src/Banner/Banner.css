@@ -1,0 +1,18 @@
+
+.container{
+    height: 50vh;
+    position: relative;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.ibb.co/Z16pnRC/team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import swal from "sweetalert";
 
 
@@ -29,15 +30,15 @@ const handleDonation = () =>{
                 title: "Thank You!",
                 text: "Donate Successful!",
                 icon: "success",
-                button: "Close!",
+                button: "OK!",
               });
         }
         else{
             swal({
                 title: "Error!",
-                text: "You Already Do!",
+                text: "You Already Donate!",
                 icon: "error",
-                button: "Close!",
+                button: "OK!",
               });
         }
     }
@@ -50,7 +51,7 @@ const handleDonation = () =>{
     }
     return (
         <div>
-            <div className="mb-20">
+            <div className="mb-20 p-3 ">
                 <div className=" relative">
                 <img className="w-full max-h-[60vh]" src={picture} alt="" />
                 <button 

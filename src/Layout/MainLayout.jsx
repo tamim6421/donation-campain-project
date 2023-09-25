@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import Banner from "../Components/Header/Banner/Banner";
 import Navbar from "../Components/Header/Navbar/Navbar";
 
 const MainLayout = () => {
