@@ -22,7 +22,7 @@ const Background = ({handleSubmit}) => {
                 I Grow By Helping People In Need
               </h1>
             </div>
-            <div className="relative">
+            <div className="relative text-center my-3">
               <form onSubmit={handleSubmitData}>
               <input
                 type="text"
@@ -32,7 +32,7 @@ const Background = ({handleSubmit}) => {
               />
 
               <input
-                className="bg-[#FF444A;] text-white input"
+                className="bg-[#FF444A;] text-white input mt-2 "
                 type="submit"
                 value="Submit"
               />

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import swal from "sweetalert";
-
+import './DetailsInfo.css'
 
 const DetailsInfo = ({data}) => {
     const{picture,title,price,description,text_color,id} = data
@@ -54,9 +54,12 @@ const handleDonation = () =>{
             <div className="mb-20 p-3 ">
                 <div className=" relative">
                 <img className="w-full max-h-[60vh]" src={picture} alt="" />
+                <div className="overly">
                 <button 
                 onClick={handleDonation}
                 style={btnBg} className="px-3 py-2 rounded-lg text-white absolute left-5 bottom-5" >Donate$ {price}</button>
+                </div>
+                
                 </div>
                 
                 <p className=" text-2xl font-semibold my-3"> {title} </p>
