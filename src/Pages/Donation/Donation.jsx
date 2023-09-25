@@ -17,13 +17,14 @@ useEffect( ()=>{
    
 } ,[])
 
-console.log(donate.length)
+// console.log(donate.length)
   return (
     <div>
       {
-        empty ? <p className="h-[60vh] flex items-center justify-center"> {empty} </p> :
+        empty ? <p className="h-[60vh] flex items-center text-3xl font-bold text-red-500 justify-center"> {empty} </p> :
         <div>
-            <div className="grid gap-5 grid-cols-1 md:grid-cols-2 mt-4">
+            <h1 className="text-xl font-bold my-10 text-center">Total Donation : {donate.length} </h1>
+            <div className="grid gap-5 grid-cols-1 lg:grid-cols-2 mt-4">
                 {
                    
                   donate.slice(0, dataLength).map(item => <DonationCard key={item.id} item={item}></DonationCard>)

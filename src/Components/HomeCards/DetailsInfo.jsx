@@ -35,7 +35,7 @@ const handleDonation = () =>{
         else{
             swal({
                 title: "Error!",
-                text: "You Already Donate!",
+                text: "You Already Do!",
                 icon: "error",
                 button: "Close!",
               });

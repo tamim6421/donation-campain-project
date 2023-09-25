@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const DonationCard = ({item}) => {
+    const navigate = useNavigate()
     const {
         card_bg_color,
         category,
@@ -26,7 +28,11 @@ const DonationCard = ({item}) => {
       const btnBg ={
         backgroundColor: text_color,
       }
-    console.log(item)
+    // console.log(item)
+
+    const handleBack = () =>{
+        navigate(-1)
+    }
     return (
         <div>
              <div className="card card-side bg-base-100 shadow-xl p-2">
@@ -37,11 +43,16 @@ const DonationCard = ({item}) => {
             />
           </figure>
           <div style={cardBgStyle} className="card-body p-2">
-           <span style={cateBg} className='max-w-max px-4 py-2 font-bold rounded-lg'> {category} </span>
+           <span style={cateBg} className='max-w-max px-4 py-2 font-bold rounded-sm '> {category} </span>
             <p className='text-xl font-semibold'>{title} </p>
             <p style={text} className='text-xl font-semibold'>${price} </p>
             <div className="card-actions">
-              <button style={btnBg} className="text-white px-3 py-1 rounded-sm ">View Details</button>
+                
+                <button 
+                onClick={handleBack}
+                 style={btnBg} className="text-white px-3 py-1 rounded-sm ">View Details</button>
+               
+              
             </div>
           </div>
         </div>
