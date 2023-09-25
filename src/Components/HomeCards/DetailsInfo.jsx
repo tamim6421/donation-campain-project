@@ -1,3 +1,4 @@
+import swal from "sweetalert";
 
 
 const DetailsInfo = ({data}) => {
@@ -11,7 +12,12 @@ const handleDonation = () =>{
     if(!getDonateItems){
         donateItems.push(data)
         localStorage.setItem('items', JSON.stringify(donateItems))
-        alert('added')
+        swal({
+            title: "Thank You!",
+            text: "Donate Successful!",
+            icon: "success",
+            button: "Close!",
+          });
     }
     else{
 
@@ -19,10 +25,20 @@ const handleDonation = () =>{
         if(!exist){
             donateItems.push(...getDonateItems, data)
             localStorage.setItem('items', JSON.stringify(donateItems))
-            alert('added')
+            swal({
+                title: "Thank You!",
+                text: "Donate Successful!",
+                icon: "success",
+                button: "Close!",
+              });
         }
         else{
-            alert('already added')
+            swal({
+                title: "Error!",
+                text: "You Already Donate!",
+                icon: "error",
+                button: "Close!",
+              });
         }
     }
 }
