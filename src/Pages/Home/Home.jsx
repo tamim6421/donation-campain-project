@@ -31,14 +31,13 @@ useEffect(()=>{
 useEffect(()=>{
   setDisplayName(allData)
 
-} ,[])
+} ,[allData])
 
 
 
   return (
     <div>
-        {/* <Banner></Banner> */}
-        {/* <Banner handleSubmit={handleData}></Banner> */}
+       
         <Banner handleSubmit={handleData}></Banner>
       <div className="grid gap-4 my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {displayName.map((card) => (
