@@ -27,14 +27,14 @@ const Background = ({handleSubmit}) => {
               <input
                 type="text"
                 name="name"
-                placeholder="Type here"
+                placeholder="Search category here"
                 className="input input-bordered input-md w-full max-w-xs"
               />
 
               <input
                 className="bg-[#FF444A;] text-white input mt-2 "
                 type="submit"
-                value="Submit"
+                value="Search"
               />
               </form>
 
