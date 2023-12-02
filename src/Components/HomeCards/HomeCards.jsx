@@ -30,7 +30,7 @@ const handleNavigate = () =>{
     <div>
       <div 
       onClick={handleNavigate}
-       style={cardBgStyle}  className="relative flex h-72 flex-col rounded-xl bg-clip-border text-gray-700 shadow-md cursor-pointer">
+       style={cardBgStyle}  className="relative flex overflow-hidden h-72 flex-col rounded-xl bg-clip-border  text-gray-700 hover:translate-x-2 shadow-md cursor-pointer">
         <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
           <img
             src={picture}

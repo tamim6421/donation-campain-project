@@ -22,6 +22,7 @@ const Background = ({handleSubmit}) => {
                 I Grow By Helping People In Need
               </h1>
             </div>
+            <p className="text lg my-5 text-center text-gray-500 font-semibold">Search by Category: food,  health, clothing, education </p>
             <div className="relative text-center my-3">
               <form onSubmit={handleSubmitData}>
               <input
